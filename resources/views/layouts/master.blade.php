@@ -6,9 +6,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Empowerment of Positive Mind</title>
-	<meta name="description" content="The Project a Bootstrap-based, Responsive HTML5 Template">
+	<title>Empowerment of Positive Mind</title>	
 	<meta name="author" content="Empowerment of positive Mind">
+	<meta name="description" content="@yield('description','EMPOWERMENT OF POSITIVE MIND.LLC')">
+	<meta name="keywords" content="@yield('keywords','Empowerment of positive Mind')">
+
 
 	<!-- Mobile Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,6 +40,8 @@
 	{!! HTML::style('style-switcher/style-switcher.css') !!}
 
 	{!! HTML::style('css/custom.css') !!}
+
+	{!! HTML::script('js/app.js') !!}
 	
 
 </head>

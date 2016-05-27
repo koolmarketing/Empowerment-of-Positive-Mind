@@ -1,5 +1,8 @@
 @extends('layouts.master')
-
+@section('description')
+Brindamos a través de seminarios, talleres educativos y motivacionales a las organizaciones, las instituciones educativas,  a los lideres, padre e hijos de la sociedad, procesos de alta transformación.
+@stop
+@section('keywords')Seminarios, consultoría, Procesos de transformación, Instituciones, valores  @stop
 @section('content')
 
 
@@ -46,7 +49,7 @@
 								<li>Especialista en Riesgo Psicosocial </li>
 							</ul><br>							
 							
-							Brindamos a través de seminarios, talleres educativos y motivacionales a las organizaciones, las instituciones educativas,  a los lideres, padre e hijos de la sociedad, procesos de alta transformación
+							Brindamos a través de seminarios, talleres educativos y motivacionales a las organizaciones, las instituciones educativas,  a los lideres, padre e hijos de la sociedad, procesos de alta transformación.
 						</p>
 						
 					

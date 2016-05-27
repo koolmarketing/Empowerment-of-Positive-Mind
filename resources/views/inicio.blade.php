@@ -171,7 +171,7 @@ data-endspeed="200">
 					<h3>Valores</h3>
 					<div class="separator clearfix"></div>
 					<p class="text-muted">Siembra e interiorizacón de <b>156</b> valores</p>
-					<a href="page-services.html">Ver más<i class="pl-5 fa fa-angle-double-right"></i></a>
+					<a href="{!! URL::to("valores") !!}">Ver más<i class="pl-5 fa fa-angle-double-right"></i></a>
 				</div>
 			</div>
 
@@ -186,7 +186,7 @@ data-endspeed="200">
 							<li>Habilidades Gerenciales "HAGE"</li>
 						</ul>
 					</p>
-					<a href="">Ver más<i class="pl-5 fa fa-angle-double-right"></i></a>
+					<a href="{!! URL::to("competencias_lider") !!}">Ver más<i class="pl-5 fa fa-angle-double-right"></i></a>
 				</div>
 			</div>
 
@@ -202,7 +202,7 @@ data-endspeed="200">
 							<li>Grupos Nominales</li>
 						</ul>
 					</p>
-					<a class="link-dark" href="">Ver más<i class="pl-5 fa fa-angle-double-right"></i></a>
+					<a class="link-dark" href="{!! URL::to("clima_laboral") !!}">Ver más<i class="pl-5 fa fa-angle-double-right"></i></a>
 				</div>
 			</div>
 
@@ -218,7 +218,7 @@ data-endspeed="200">
 						<li>Profesional</li>
 					</ul></p>
 					
-					<a class="link-dark" href="page-services.html">Ver más<i class="pl-5 fa fa-angle-double-right"></i></a>
+					<a class="link-dark" href="{!! URL::to("seleccion_personal") !!}">Ver más<i class="pl-5 fa fa-angle-double-right"></i></a>
 				</div>
 			</div>
 
@@ -228,7 +228,7 @@ data-endspeed="200">
 					<h3>Salario emocional</h3>
 					<div class="separator clearfix"></div>
 					<p class="text-muted">Crear una <b>CUENTA DE AHORROS EMOCIONAL</b> para los Empleados, genera bienestar en su: Salario Emocional, Vínculos  Emocionales...</p>
-					<a href="page-services.html">Ver más<i class="pl-5 fa fa-angle-double-right"></i></a>
+					<a href="{!! URL::to("salario_emocional") !!}">Ver más<i class="pl-5 fa fa-angle-double-right"></i></a>
 				</div>
 			</div>
 
@@ -245,7 +245,7 @@ data-endspeed="200">
 							<li>Pildoras</li>
 							<li>Capsulas</li>
 						</ul>
-					<a class="link-dark" href="page-services.html">Ver más<i class="pl-5 fa fa-angle-double-right"></i></a>
+					<a class="link-dark" href="{!! URL::to("calidad_vida") !!}">Ver más<i class="pl-5 fa fa-angle-double-right"></i></a>
 				</div>
 			</div>
 
