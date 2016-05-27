@@ -29,29 +29,33 @@
 					Oops! Something went wrong please refresh the page and try again.
 				</div>
 				<div class="contact-form">
-					<form id="contact-form" class="margin-clear" role="form">
+					
+
+					{!!Form::open(array('action' => 'EpmController@SendForm', 'method' => 'post', 'id' => 'form_enviar','files'=>true));!!}
+
 						<div class="form-group has-feedback">
 							<label for="name">Nombre*</label>
-							<input type="text" class="form-control" id="name" name="name" placeholder="">
+							<input type="text" class="form-control" id="name" name="nombre" placeholder="" required="required">
 							<i class="fa fa-user form-control-feedback"></i>
 						</div>
 						<div class="form-group has-feedback">
 							<label for="email">Email*</label>
-							<input type="email" class="form-control" id="email" name="email" placeholder="">
+							<input type="email" class="form-control" id="email" name="email" placeholder="" required="required">
 							<i class="fa fa-envelope form-control-feedback"></i>
 						</div>
 						<div class="form-group has-feedback">
 							<label for="subject">Asunto*</label>
-							<input type="text" class="form-control" id="subject" name="subject" placeholder="">
+							<input type="text" class="form-control" id="subject" name="asunto" placeholder="" required="required">
 							<i class="fa fa-navicon form-control-feedback"></i>
 						</div>
 						<div class="form-group has-feedback">
 							<label for="message">Mensaje*</label>
-							<textarea class="form-control" rows="6" id="message" name="message" placeholder=""></textarea>
+							<textarea class="form-control" rows="6" id="message" name="mensaje" placeholder="" required="required"></textarea>
 							<i class="fa fa-pencil form-control-feedback"></i>
 						</div>
-						<input type="submit" value="Enviar" class="submit-button btn btn-default">
-					</form>
+
+						<input  value="Enviar" class="btn btn-default" id="btn_enviar_form">
+					{!! Form::close() !!}
 				</div>
 			</div>
 			<!-- main end -->

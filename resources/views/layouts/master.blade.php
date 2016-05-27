@@ -7,9 +7,20 @@
 <head>
 	<meta charset="utf-8">
 	<title>Empowerment of Positive Mind</title>	
+	<meta name="_token" content="<?php echo csrf_token(); ?>">
 	<meta name="author" content="Empowerment of positive Mind">
 	<meta name="description" content="@yield('description','EMPOWERMENT OF POSITIVE MIND.LLC')">
 	<meta name="keywords" content="@yield('keywords','Empowerment of positive Mind')">
+
+	
+
+	<meta property="og:url"                content="@yield('og:url','http://empoderamientodelamentepositiva.com.co/')" />
+	<meta property="og:type"               content="@yield('og:type','website')" />
+	<meta property="og:title"              content="@yield('og:title','Empowerment of positive Mind')" />
+	<meta property="og:description"     content="@yield('og:description','Brindamos a través de seminarios, talleres educativos y motivacionales a las organizaciones, las instituciones educativas, a los lideres, padre e hijos de la sociedad, procesos de alta transformación.')" />
+	<?php $img = URL::to('img/epm.jpg'); ?>
+	<meta property="og:image"              content="@yield('og:image','http://empoderamientodelamentepositiva.com.co/img/epm.jpg')" />
+	<meta property="fb:app_id" content="1787956301437664" /> 
 
 
 	<!-- Mobile Meta -->
@@ -38,10 +49,39 @@
 	{!! HTML::style('css/style.css') !!}
 	{!! HTML::style('css/skins/purple.css') !!}
 	{!! HTML::style('style-switcher/style-switcher.css') !!}
+	{!! HTML::style('bower_components/sweetalert/dist/sweetalert.css') !!}
 
 	{!! HTML::style('css/custom.css') !!}
 
-	{!! HTML::script('js/app.js') !!}
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '1787956301437664',
+				xfbml      : true,
+				version    : 'v2.6'
+			});
+		};
+
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+
+
+
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-78418284-1', 'auto');
+		ga('send', 'pageview');
+
+
+	</script>
 	
 
 </head>
@@ -230,11 +270,20 @@
 
 				<script type="text/javascript" src="plugins/jquery.min.js"></script>
 				<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+
+				<!-- APP -->
+				{!! HTML::script('js/app.js') !!}
+
+
 				<!-- Modernizr javascript -->
 				<script type="text/javascript" src="plugins/modernizr.js"></script>
 				<!-- jQuery Revolution Slider  -->
 				<script type="text/javascript" src="plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
 				<script type="text/javascript" src="plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+
+				{!! HTML::script('bower_components/sweetalert/dist/sweetalert.min.js') !!}
 				<!-- Isotope javascript -->
 				<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
 				<!-- Magnific Popup javascript -->

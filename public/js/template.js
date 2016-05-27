@@ -8,16 +8,16 @@
  * File Description: Initializations of plugins
  */
 
-(function($){
-	$(document).ready(function(){
+ (function($){
+ 	$(document).ready(function(){
 
-		if ($('.boxed .fullscreen-bg').length>0) {
-			$("body").addClass("transparent-page-wrapper");
-		};
+ 		if ($('.boxed .fullscreen-bg').length>0) {
+ 			$("body").addClass("transparent-page-wrapper");
+ 		};
 
-		$(window).load(function() {
-			$("body").removeClass("no-trans");
-		});
+ 		$(window).load(function() {
+ 			$("body").removeClass("no-trans");
+ 		});
 		// Enable Smooth Scroll only on Chrome and only on Win and Linux Systems
 		var platform = navigator.platform.toLowerCase();
 		if ((platform.indexOf('win') == 0 || platform.indexOf('linux') == 0) && !Modernizr.touch) {
@@ -31,18 +31,18 @@
 		var delay=0, setTimeoutConst;
 		if ((Modernizr.mq('only all and (min-width: 768px)') && !Modernizr.touch) || $("html.ie8").length>0) {
 			$('.main-navigation:not(.onclick) .navbar-nav>li.dropdown, .main-navigation:not(.onclick) li.dropdown>ul>li.dropdown').hover(
-			function(){
-				var $this = $(this);
-				setTimeoutConst = setTimeout(function(){
-					$this.addClass('open').slideDown();
-					$this.find('.dropdown-toggle').addClass('disabled');
-				}, delay);
+				function(){
+					var $this = $(this);
+					setTimeoutConst = setTimeout(function(){
+						$this.addClass('open').slideDown();
+						$this.find('.dropdown-toggle').addClass('disabled');
+					}, delay);
 
-			},	function(){
-				clearTimeout(setTimeoutConst );
-				$(this).removeClass('open');
-				$(this).find('.dropdown-toggle').removeClass('disabled');
-			});
+				},	function(){
+					clearTimeout(setTimeoutConst );
+					$(this).removeClass('open');
+					$(this).find('.dropdown-toggle').removeClass('disabled');
+				});
 		};
 
 		//Show dropdown on click only for mobile devices
@@ -59,7 +59,7 @@
 			$(this).parent().siblings().find('[data-toggle=dropdown]').parent().removeClass('open');
 			// opening the one you clicked on
 			$(this).parent().toggleClass('open');
-			});
+		});
 		};
 
 		//Transparent Header Calculations
@@ -1002,20 +1002,20 @@
 				var barChartData = {
 					labels : ["January","February","March","April","May","June","July"],
 					datasets : [
-						{
-							fillColor : "rgba(188,188,188,0.5)",
-							strokeColor : "rgba(188,188,188,0.8)",
-							highlightFill: "rgba(188,188,188,0.75)",
-							highlightStroke: "rgba(188,188,188,1)",
-							data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
-						},
-						{
-							fillColor : "rgba(168,187,205,0.5)",
-							strokeColor : "rgba(168,187,205,0.8)",
-							highlightFill : "rgba(168,187,205,0.75)",
-							highlightStroke : "rgba(168,187,205,1)",
-							data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
-						}
+					{
+						fillColor : "rgba(188,188,188,0.5)",
+						strokeColor : "rgba(188,188,188,0.8)",
+						highlightFill: "rgba(188,188,188,0.75)",
+						highlightStroke: "rgba(188,188,188,1)",
+						data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+					},
+					{
+						fillColor : "rgba(168,187,205,0.5)",
+						strokeColor : "rgba(168,187,205,0.8)",
+						highlightFill : "rgba(168,187,205,0.75)",
+						highlightStroke : "rgba(168,187,205,1)",
+						data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+					}
 					]
 				}
 
@@ -1030,24 +1030,24 @@
 			if ($(".graph.pie").length>0) {
 				// Data for pie chart
 				var pieData = [
-					{
-						value: 120,
-						color:"#09afdf",
-						highlight: "#6BD5F4",
-						label: "Blue"
-					},
-					{
-						value: 120,
-						color: "#FDB45C",
-						highlight: "#FFC870",
-						label: "Yellow"
-					},
-					{
-						value: 120,
-						color: "#4D5360",
-						highlight: "#616774",
-						label: "Dark Grey"
-					}
+				{
+					value: 120,
+					color:"#09afdf",
+					highlight: "#6BD5F4",
+					label: "Blue"
+				},
+				{
+					value: 120,
+					color: "#FDB45C",
+					highlight: "#FFC870",
+					label: "Yellow"
+				},
+				{
+					value: 120,
+					color: "#4D5360",
+					highlight: "#616774",
+					label: "Dark Grey"
+				}
 				];
 
 				// Pie Chart Initialization
@@ -1059,24 +1059,24 @@
 			if ($(".graph.doughnut").length>0) {
 				// Data for doughnut chart
 				var doughnutData = [
-					{
-						value: 120,
-						color:"#09afdf",
-						highlight: "#6BD5F4",
-						label: "Blue"
-					},
-					{
-						value: 120,
-						color: "#FDB45C",
-						highlight: "#FFC870",
-						label: "Yellow"
-					},
-					{
-						value: 120,
-						color: "#4D5360",
-						highlight: "#616774",
-						label: "Dark Grey"
-					}
+				{
+					value: 120,
+					color:"#09afdf",
+					highlight: "#6BD5F4",
+					label: "Blue"
+				},
+				{
+					value: 120,
+					color: "#FDB45C",
+					highlight: "#FFC870",
+					label: "Yellow"
+				},
+				{
+					value: 120,
+					color: "#4D5360",
+					highlight: "#616774",
+					label: "Dark Grey"
+				}
 				];
 
 				// Doughnut Chart Initialization
@@ -1348,9 +1348,12 @@
 			$("#contact-form").validate({
 				submitHandler: function(form) {
 					$('.submit-button').button("loading");
+					$.ajaxSetup({
+						headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+					})
 					$.ajax({
 						type: "POST",
-						url: "php/email-sender.php",
+						url: "send",
 						data: {
 							"name": $("#contact-form #name").val(),
 							"email": $("#contact-form #email").val(),
@@ -1746,7 +1749,7 @@
 			$(this).parent().siblings().find('[data-toggle=dropdown]').parent().removeClass('open');
 			// opening the one you clicked on
 			$(this).parent().toggleClass('open');
-			});
+		});
 		};
 
 		// Parallax section
@@ -1856,8 +1859,8 @@ if (jQuery(".btn-print").length>0) {
 }
 
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 ga('create', 'UA-40620479-9', 'auto');

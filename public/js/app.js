@@ -1,26 +1,34 @@
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1787956301437664',
-      xfbml      : true,
-      version    : 'v2.6'
-    });
-  };
+ //      SAVE AJAX   
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-
-
-
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-78418284-1', 'auto');
-  ga('send', 'pageview');
-
+        $('body').on('click', '#btn_enviar_form', function(event) {
+            event.preventDefault();
+            console.log("entra");
+                $.ajaxSetup({
+                    headers: { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') }
+                })
+                
+                var formId = '#form_enviar';
+                $.ajax({
+                    url: $(formId).attr('action'),
+                    type: $(formId).attr('method'),
+                    data: $(formId).serialize(),
+                    dataType: 'html',
+                    success: function(result){
+                        if ($(formId).find("input:first-child").attr('value') == 'PUT') {
+                            var $jsonObject = jQuery.parseJSON(result);
+                            $(location).attr('href',$jsonObject.url);
+                        }
+                        else{
+                            $(formId)[0].reset();
+                            console.log(result); 
+                            //swal("Tú Mensaje se ha enviado con éxito");
+                            swal("Éxito", "Tu mensaje fue enviado", "success")
+                            
+                        }
+                    },
+                    error: function(){
+                        console.log('Error');
+                    }
+                });                    
+        });
+//      END SAVE AJAX    <---

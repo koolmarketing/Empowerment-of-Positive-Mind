@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Validator;
+use Redirect;
 use App\Http\Requests;
 
 class EpmController extends Controller
@@ -72,6 +74,27 @@ class EpmController extends Controller
 		public function CalidadVida()
 		{
 			return view('servicios.calidad_vida');
+		}
+		public function SendForm(Request $request)
+		{
+
+			$para      = 'info@empoderamientodelamentepositiva.com.co';
+			$titulo    = 'Mensaje del sitio Web';
+
+				$mensaje   = '<h3>Información de Usuario</h3><p><b>Propietario: 
+				</b>            '. $request->input("nombre") .'</p>	  
+			<p><b>Email:</b>                       '. $request->input("email") .' </p>
+			<p><b>Asunto:</b>                      '. $request->input("asunto") .'</p>
+			<p><b>Mensaje:</b>                     '. $request->input("mensaje") .'</p>';	  
+
+			$cabeceras = "From: info@empoderamientodelamentepositiva.com.co" . "\r\n" .	"Reply-To: info@empoderamientodelamentepositiva.com.co" . "\r\n" .			"Content-type: text/html; charset=UTF-8" . "\r\n".
+			"X-Mailer: PHP/" . phpversion().'';
+
+
+			mail($para, $titulo, $mensaje, $cabeceras);
+
+
+			return $request->input();
 		}
 
 	}

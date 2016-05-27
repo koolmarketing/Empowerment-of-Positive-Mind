@@ -28,7 +28,8 @@ Route::group(['prefix' => '/', 'middleware' => 'web'], function()
 		'uses' => 'EpmController@autoretrato'
 		]);
 
-	Route::get('contacto', [		
+	Route::get('contacto', [	
+	'middleware' => 'web',	
 		'as'   => 'Servicios', 
 		'uses' => 'EpmController@contacto'
 		]);
@@ -66,6 +67,12 @@ Route::get('salario_emocional', [
 Route::get('calidad_vida', [		
 	'as'   => 'calidad.vida', 
 	'uses' => 'EpmController@CalidadVida'
+	]);
+
+Route::POST('send', [	
+	'middleware' => 'web',	
+	'as'   => 'send.form', 
+	'uses' => 'EpmController@SendForm'
 	]);
 
 
