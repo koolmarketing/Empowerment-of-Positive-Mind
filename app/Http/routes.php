@@ -40,7 +40,7 @@ Route::group(['prefix' => '/', 'middleware' => 'web'], function()
 
 Route::get('valores', [		
 	'as'   => 'valores', 
-	'uses' => 'EpmController@valores'
+	'uses' => 'EpmController@Valores'
 	]);
 
 Route::get('competencias_lider', [		
@@ -63,7 +63,7 @@ Route::get('salario_emocional', [
 	'uses' => 'EpmController@SalarioEmocional'
 	]);
 
-Route::get('seleccion_personal', [		
+Route::get('calidad_vida', [		
 	'as'   => 'calidad.vida', 
 	'uses' => 'EpmController@CalidadVida'
 	]);

@@ -13,7 +13,7 @@
 				<h3 class="title logo-font object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100"><center><img src="img/logo-h-w.png"></center></h3>
 
 				<div class="separator object-non-visible mt-10" data-animation-effect="fadeIn" data-effect-delay="100"></div>
-				<h2 style="font-family: times" class="text-center object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100">Competencias del Lider </h2>			
+				<h2 style="font-family: times" class="text-center object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100">Calidad de Vida</h2>			
 			</div>
 		</div>
 	</div>
@@ -34,31 +34,26 @@
 
 				<div class="separator-2"></div>
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-7">
 
-						<h4>TEST-AUTORRETRATO DE LA PERSONALIDAD
-							Aplicación Test de la prueba de personalidad.
-							¿QUIEN SOY YO?, ¿QUIÉN ERES TÚ?, ¿ CUAL ES TU PROBLEMA?<h4>
+						<h4>8 CONSEJOS PARA SUPERAR LAS DIFICULTADES: </h4>
 
-							<h5>
-								Manejo de las 6 Áreas importantes de mi vida
-							</h5>
 							<ol>
-								<li>Su vida de relación (Relaciones interpersonales)</li>
-								<li>Su vida sentimental, (su pareja- compatibilidad)</li>
-								<li>Su vida emocional.(flexibilidad, adaptación y autocontrol)</li>
-								<li>Su trabajo (desempeño, crecimiento, plan carrera) </li>
-								<li>Que refleja y  cómo ve su  propia imagen, a nivel laboral, social y sentimental.</li>
-								<li>Su autocontrol, impulsos y apetitos.</li>
-								<li>El sentido de la realidad, (el aquí y el ahora)</li>
-								<li>La espiritualidad.</li>
+							<li>Piense en sus posibilidades de forma positiva.</li>
+								<li> Póngase metas a corto plazo y con fecha concreta.</li>
+								<li>Deje de darle vueltas y actúe.</li>
+								<li>Barra sus ideas limitadoras y sus prejuicios.</li>
+								<li>Utilice su creatividad.</li>
+								<li> No se precipite.</li>
+								<li> Aprenda de los mejores.</li>
+								<li> Muestre agradecimiento.</li>
 							</ol>
-							<br>
-							<a href="{!! URL::to('autorretrato_personalidad') !!}" type="button" class="btn btn-primary">Saber más</a>
+							
+							
 						</div>
 
-						<div class="col-md-6">
-							<img src="img/mpersonalidad.jpg" class="img-responsive">
+						<div class="col-md-5">
+							<img src="img/viajar1.jpg" class="img-responsive">
 						</div>
 					</div>
 				</div>

@@ -71,7 +71,7 @@ class EpmController extends Controller
 
 		public function CalidadVida()
 		{
-			return view('servicios.seleccion_personal');
+			return view('servicios.calidad_vida');
 		}
 
 	}
